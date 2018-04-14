@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.transporter" name="Transporter" version="2018.04.03" provider-name="Fearless">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.universalscrapers" version="1.0.2"/>
+    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="script.module.xmltodict" version="0.9.0" />
+    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+		<import addon="script.module.aragon" version="1.0" />
+        <import addon="script.module.aragon.net" version="1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Transporter addon</summary>
+    <description lang="en"></description>
+    <disclaimer lang="en">The authors of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk! Based off the Jen Template.</disclaimer>   
+    <platform>all</platform>
+    <news></news>
+    <website></website>
+    <video_guide></video_guide>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot></screenshot>
+    </assets>
+  </extension>
+</addon>

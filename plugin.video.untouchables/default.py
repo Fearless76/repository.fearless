@@ -1,471 +1,210 @@
 # -*- coding: utf-8 -*-
 
-
-
-import urlparse,sys,urllib
-
-params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
-
-action = params.get('action')
-
-name = params.get('name')
-
-title = params.get('title')
-
-year = params.get('year')
-
-imdb = params.get('imdb')
-
-tvdb = params.get('tvdb')
-
-season = params.get('season')
-
-episode = params.get('episode')
-
-tvshowtitle = params.get('tvshowtitle')
-
-premiered = params.get('premiered')
-
-url = params.get('url')
-
-image = params.get('image')
-
-meta = params.get('meta')
-
-select = params.get('select')
-
-query = params.get('query')
-
-source = params.get('source')
-
-content = params.get('content')
-
-fanart = params.get('fanart')
-
-if action == None:
-    from resources.lib.indexers import streamhub
-    try:
-     streamhub.d()
-    except:
-     pass
-    from resources.lib.modules import check4update
-    check4update.check4update()
-    streamhub.indexer().root()
-
-elif action == 'directory':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().get(url)
-
-elif action == 'parental':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().parental_controls()
-
-elif action == 'qdirectory':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().getq(url)
-
-elif action == 'xdirectory':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().getx(url)
-
-elif action == 'developer':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().developer()
-
-elif action == 'tvtuner':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().tvtuner(url)
-
-elif 'youtube' in str(action):
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().youtube(url, action)
-
-elif action == 'play':
-    from resources.lib.indexers import streamhub
-    streamhub.player().play(url, content)
-
-elif action == 'browser':
-    from resources.lib.indexers import streamhub
-    streamhub.resolver().browser(url)
-
-elif action == 'search':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().search()
-
-elif action == 'addSearch':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().addSearch(url)
-
-elif action == 'delSearch':
-    from resources.lib.indexers import streamhub
-    streamhub.indexer().delSearch()
-
-elif action == 'queueItem':
-    from resources.lib.modules import control
-    control.queueItem()
-
-elif action == 'openSettings':
-    from resources.lib.modules import control
-    control.openSettings()
-
-elif action == 'urlresolverSettings':
-    from resources.lib.modules import control
-    control.openSettings(id='script.module.urlresolver')
-
-elif action == 'addView':
-    from resources.lib.modules import views
-    views.addView(content)
-
-elif action == 'downloader':
-    from resources.lib.modules import downloader
-    downloader.downloader()
-
-elif action == 'addDownload':
-    from resources.lib.modules import downloader
-    downloader.addDownload(name,url,image)
-
-elif action == 'removeDownload':
-    from resources.lib.modules import downloader
-    downloader.removeDownload(url)
-
-elif action == 'startDownload':
-    from resources.lib.modules import downloader
-    downloader.startDownload()
-
-elif action == 'startDownloadThread':
-    from resources.lib.modules import downloader
-    downloader.startDownloadThread()
-
-elif action == 'stopDownload':
-    from resources.lib.modules import downloader
-    downloader.stopDownload()
-
-elif action == 'statusDownload':
-    from resources.lib.modules import downloader
-    downloader.statusDownload()
-
-elif action == 'trailer':
-    from resources.lib.modules import trailer
-    trailer.trailer().play(name)
-
-elif action == 'clearCache':
-    from resources.lib.modules import cache
-    cache.clear()
-
-elif action == 'movieNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().movies()
-
-elif action == 'movieliteNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().movies(lite=True)
-
-elif action == 'mymovieNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().mymovies()
-
-elif action == 'mymovieliteNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().mymovies(lite=True)
-
-elif action == 'tvNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().tvshows()
-
-elif action == 'tvliteNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().tvshows(lite=True)
-
-elif action == 'mytvNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().mytvshows()
-
-elif action == 'mytvliteNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().mytvshows(lite=True)
-
-elif action == 'downloadNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().downloads()
-
-elif action == 'toolNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().tools()
-
-elif action == 'searchNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().search()
-
-elif action == 'viewsNavigator':
-    from resources.lib.indexers import navigator
-    navigator.navigator().views()
-
-elif action == 'clearCache':
-    from resources.lib.indexers import navigator
-    navigator.navigator().clearCache()
-
-elif action == 'infoCheck':
-    from resources.lib.indexers import navigator
-    navigator.navigator().infoCheck('')
-
-elif action == 'movies':
-    from resources.lib.indexers import movies
-    movies.movies().get(url)
-
-elif action == 'moviePage':
-    from resources.lib.indexers import movies
-    movies.movies().get(url)
-
-elif action == 'movieWidget':
-    from resources.lib.indexers import movies
-    movies.movies().widget()
-
-elif action == 'movieSearch':
-    from resources.lib.indexers import movies
-    movies.movies().search()
-
-elif action == 'moviePerson':
-    from resources.lib.indexers import movies
-    movies.movies().person()
-
-elif action == 'movieGenres':
-    from resources.lib.indexers import movies
-    movies.movies().genres()
-
-elif action == 'movieLanguages':
-    from resources.lib.indexers import movies
-    movies.movies().languages()
-
-elif action == 'movieCertificates':
-    from resources.lib.indexers import movies
-    movies.movies().certifications()
-
-elif action == 'movieYears':
-    from resources.lib.indexers import movies
-    movies.movies().years()
-
-elif action == 'moviePersons':
-    from resources.lib.indexers import movies
-    movies.movies().persons(url)
-
-elif action == 'movieUserlists':
-    from resources.lib.indexers import movies
-    movies.movies().userlists()
-
-elif action == 'channels':
-    from resources.lib.indexers import channels
-    channels.channels().get()
-
-elif action == 'tvshows':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().get(url)
-
-elif action == 'tvshowPage':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().get(url)
-
-elif action == 'tvSearch':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().search()
-
-elif action == 'tvPerson':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().person()
-
-elif action == 'tvGenres':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().genres()
-
-elif action == 'tvNetworks':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().networks()
-
-elif action == 'tvLanguages':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().languages()
-
-elif action == 'tvCertificates':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().certifications()
-
-elif action == 'tvPersons':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().persons(url)
-
-elif action == 'tvUserlists':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().userlists()
-
-elif action == 'seasons':
-    from resources.lib.indexers import episodes
-    episodes.seasons().get(tvshowtitle, year, imdb, tvdb)
-
-elif action == 'episodes':
-    from resources.lib.indexers import episodes
-    episodes.episodes().get(tvshowtitle, year, imdb, tvdb, season, episode)
-
-elif action == 'calendar':
-    from resources.lib.indexers import episodes
-    episodes.episodes().calendar(url)
-
-elif action == 'tvWidget':
-    from resources.lib.indexers import episodes
-    episodes.episodes().widget()
-
-elif action == 'calendars':
-    from resources.lib.indexers import episodes
-    episodes.episodes().calendars()
-
-elif action == 'episodeUserlists':
-    from resources.lib.indexers import episodes
-    episodes.episodes().userlists()
-
-elif action == 'refresh':
-    from resources.lib.modules import control
-    control.refresh()
-
-elif action == 'queueItem':
-    from resources.lib.modules import control
-    control.queueItem()
-
-elif action == 'openSettings':
-    from resources.lib.modules import control
-    control.openSettings(query)
-
-elif action == 'artwork':
-    from resources.lib.modules import control
-    control.artwork()
-
-elif action == 'addView':
-    from resources.lib.modules import views
-    views.addView(content)
-
-elif action == 'moviePlaycount':
-    from resources.lib.modules import playcount
-    playcount.movies(imdb, query)
-
-elif action == 'episodePlaycount':
-    from resources.lib.modules import playcount
-    playcount.episodes(imdb, tvdb, season, episode, query)
-
-elif action == 'tvPlaycount':
-    from resources.lib.modules import playcount
-    playcount.tvshows(name, imdb, tvdb, season, query)
-
-elif action == 'trailer':
-    from resources.lib.modules import trailer
-    trailer.trailer().play(name, url)
-
-elif action == 'traktManager':
-    from resources.lib.modules import trakt
-    trakt.manager(name, imdb, tvdb, content)
-
-elif action == 'authTrakt':
-    from resources.lib.modules import trakt
-    trakt.authTrakt()
-
-elif action == 'smuSettings':
-    #try: import urlresolver
-    #except: pass
-    import urlresolver
-    urlresolver.display_settings()
-
-elif action == 'download':
-    import json
-    from resources.lib.modules import sources
-    from resources.lib.modules import downloader
-    try: downloader.download(name, image, sources.sources().sourcesResolve(json.loads(source)[0], True))
-    except: pass
-
-elif action == 'play2':
-    from resources.lib.modules import sources
-    sources.sources().play2(title, year, imdb, tvdb, season, episode, tvshowtitle, premiered, meta, select)
-
-elif action == 'addItem':
-    from resources.lib.modules import sources
-    sources.sources().addItem(title)
-
-elif action == 'playItem':
-    from resources.lib.modules import sources
-    sources.sources().playItem(title, source)
-
-elif action == 'alterSources':
-    from resources.lib.modules import sources
-    sources.sources().alterSources(url, meta)
-
-elif action == 'clearSources':
-    from resources.lib.modules import sources
-    sources.sources().clearSources()
-
-elif action == 'random':
-    rtype = params.get('rtype')
-    if rtype == 'movie':
-        from resources.lib.indexers import movies
-        rlist = movies.movies().get(url, create_directory=False)
-        r = sys.argv[0]+"?action=play"
-    elif rtype == 'episode':
-        from resources.lib.indexers import episodes
-        rlist = episodes.episodes().get(tvshowtitle, year, imdb, tvdb, season, create_directory=False)
-        r = sys.argv[0]+"?action=play"
-    elif rtype == 'season':
-        from resources.lib.indexers import episodes
-        rlist = episodes.seasons().get(tvshowtitle, year, imdb, tvdb, create_directory=False)
-        r = sys.argv[0]+"?action=random&rtype=episode"
-    elif rtype == 'show':
-        from resources.lib.indexers import tvshows
-        rlist = tvshows.tvshows().get(url, create_directory=False)
-        r = sys.argv[0]+"?action=random&rtype=season"
-    from resources.lib.modules import control
-    from random import randint
-    import json
-    try:
-        rand = randint(1,len(rlist))-1
-        for p in ['title','year','imdb','tvdb','season','episode','tvshowtitle','premiered','select']:
-            if rtype == "show" and p == "tvshowtitle":
-                try: r += '&'+p+'='+urllib.quote_plus(rlist[rand]['title'])
-                except: pass
-            else:
-                try: r += '&'+p+'='+urllib.quote_plus(rlist[rand][p])
-                except: pass
-        try: r += '&meta='+urllib.quote_plus(json.dumps(rlist[rand]))
-        except: r += '&meta='+urllib.quote_plus("{}")
-        if rtype == "movie":
-            try: control.infoDialog(rlist[rand]['title'], control.lang(32536).encode('utf-8'), time=30000)
-            except: pass
-        elif rtype == "episode":
-            try: control.infoDialog(rlist[rand]['tvshowtitle']+" - Season "+rlist[rand]['season']+" - "+rlist[rand]['title'], control.lang(32536).encode('utf-8'), time=30000)
-            except: pass
-        control.execute('RunPlugin(%s)' % r)
-    except:
-        control.infoDialog(control.lang(32537).encode('utf-8'), time=8000)
-
-elif action=='sysinfo':
-	from resources.lib.indexers import streamhub
-	streamhub.sysinfo()
-	
-elif action == 'pair':
-    xbmc.executebuiltin('RunAddon(script.cerebro.pairwith.laucnher)')
-	
-elif action == 'movieSearchnew':
-    from resources.lib.indexers import movies
-    movies.movies().search_new()
-	
-elif action == 'movieSearchterm':
-    from resources.lib.indexers import movies
-    movies.movies().search_term(name)
-	
-elif action == 'tvSearchnew':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().search_new()
-
-elif action == 'tvSearchterm':
-    from resources.lib.indexers import tvshows
-    tvshows.tvshows().search_term(name)
-	
-elif action == 'clearCacheSearch':
-    from resources.lib.indexers import navigator
-    navigator.navigator().clearCacheSearch()
-	
-elif action == 'clearCacheSearch2':
-    from resources.lib.indexers import navigator
-    navigator.navigator().clearCacheSearch2()
+""" ^ SECTION 1:
+    This should be at the top of your code to declare the type of text
+    format you're using. Without this you may find some text editors save
+    it in an incompatible format and this can make bug tracking extremely
+    confusing! More info here: https://www.python.org/dev/peps/pep-0263/
+"""
+
+#----------------------------------------------------------------
+
+"""
+    SECTION 2:
+    This is where you'd put your license details, the GPL3 license 
+    is the most common to use as it makes it easy for others to fork
+    and improve upon your code. If you're re-using others code ALWAYS
+    check the license first, removal of licenses is NOT allowed and you
+    generally have to keep to the same license used in the original work
+    (check license details as some do differ).
+
+    Although not all licenses require it (some do, some don't),
+    you should always give credit to the original author(s). Someone may have spent
+    months if not years on the code so really it's the very least you can do if
+    you choose to use their work as a base for your own.
+"""
+# License: GPL (http://www.gnu.org/licenses/gpl-3.0.html)
+# Addon: My Python Koding Add-on
+# Author: Add your name here
+
+#----------------------------------------------------------------
+
+"""
+    SECTION 3:
+    This is your global imports, any modules you need to import code from
+    are added here. You'll see a handful of the more common imports below.
+"""
+import os           # access operating system commands
+import urlparse     # splits up the directory path - much easier importing this than coding it up ourselves
+import xbmc         # the base xbmc functions, pretty much every add-on is going to need at least one function from here
+import xbmcaddon    # pull addon specific information such as settings, id, fanart etc.
+import xbmcgui      # gui based functions, contains things like creating dialog pop-up windows
+import xbmcplugin   # contains functions required for creating directory structure style add-ons (plugins)
+
+# (*) = These modules require the noobsandnerds repo to be installed
+import koding       # (*) a framework for easy add-on development, this template is to be used in conjunction with this module.
+
+from koding import Add_Dir  # By importing something like this we don't need to use <module>.<function> to call it,
+                            # instead you can just use the function name - in this case Add_Dir().
+
+from koding import route, Run # These are essential imports which allow us to open directories and navigate through the add-on.
+
+#----------------------------------------------------------------
+
+"""
+    SECTION 4:
+    These are our global variables, anything we set here can be accessed by any of
+    our functions later on. Please bare in mind though that if you change the value
+    of a global variable from inside a function the value will revert back to the
+    value set here once that function has completed.
+"""
+addon_id     = xbmcaddon.Addon().getAddonInfo('id') # Grab our add-on id
+dialog       = xbmcgui.Dialog()                     # A basic dialog message command
+home_folder  = xbmc.translatePath('special://home/')# Convert the special path of Kodi home folder to the physical path
+addon_folder = os.path.join(home_folder,'addons')   # Join our folder above with 'addons' so we have a link to our addons folder
+art_path     = os.path.join(addon_folder,addon_id)  # Join addons folder with the addon_id, we'll use this as a basic art folder
+debug        = koding.Addon_Setting('debug')        # Grab the setting of our debug mode in add-on settings
+
+#----------------------------------------------------------------
+"""
+    SECTION 5:
+    Add our custom functions in here, it's VERY important these go in this section
+    as the code in section 6 relies on these functions. If that code tries to run
+    before these functions are declared the add-on will fail.
+
+    You'll notice each function in here has a decorator above it (an @route() line of code),
+    this assigns a mode to the function so it can be called with Add_Dir and it also tells
+    the code what paramaters to send through. For example you'll notice the Main_Menu() function
+    we've assigned to the mode "main" - this means if we ever want to get Add_Dir to open that
+    function we just use the mode "main". This particular function does not require any extra
+    params to be sent through but if you look at the Testing() function you'll see we send through
+    2 different paramaters (url and description), if you look at the Add_Dir function in Main_Menu()
+    you'll see we've sent these through as a dictionary. Using that same format you can send through
+    as many different params as you wish.
+"""
+
+#-----------------------------------------------------------
+# EDIT THIS MAIN_MENU() FUNCTION - THIS IS FUN TO PLAY WITH!
+#-----------------------------------------------------------
+@route(mode="main")
+def Main_Menu():
+
+# Only show koding tutorials if debug mode is enabled in addon settings
+    if debug=='true':
+        Add_Dir(name='KODING TUTORIALS', url='', mode='tutorials', folder=True, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
+
+    Add_Dir(name='TEST DIALOG', url='{"my_text":"My First Add-on[CR]Woohooo!!!","my_desc":"test description"}', mode='testing', folder=False, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
+
+# Once you've played with the above try uncommenting each of the following lines one by one.
+# After uncommenting a line re-run the add-on to see your changes take place.
+
+    # Add_Dir(name='OPEN FOLDER - TEST MODE', url='test_mode', mode='open_folder', folder=True, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
+    # Add_Dir(name='OPEN FOLDER - NO URL', url='', mode='open_folder', folder=True, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
+    # Add_Dir(name='VIDEO EXAMPLES', url='', mode='video_examples', folder=True, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'), description='A couple of test videos for you to look at.', content_type='video')
+    # Add_Dir(name='MUSIC EXAMPLE', url='', mode='music_examples', folder=True, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'),content_type='song')
+
+# This is our test zone, this just calls the Test_Function mode so feel free to play with the code in that function.
+    # Add_Dir(name='TESTING ZONE', url='{"test1":"this is","test2":"some example","test3":"text"}', mode='test_function', folder=False, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
+#-----------------------------
+@route(mode="test_function", args=["test1","test2","test3"])
+def Test_Function(test1, test2, test3):
+# Example of sending multiple variables through the Add_Dir function
+    xbmc.log(test1,2)
+    xbmc.log(test2,2)
+    xbmc.log(test3,2)
+    dialog.ok('CHECK THE LOG','Take a look at your log, you should be able to see the 3 lines of example text we sent through.')
+#-----------------------------
+@route(mode="open_folder", args=["url"])
+def Test_Folder(url):
+    if url == 'test_mode':
+        dialog.ok('Test Mode','open_folder has been called with the url being "test_mode". When you click OK you should open into and empty folder - this is because folder=True in our Add_Dir()')
+    else:
+        dialog.ok('TRY THESE EXAMPLES','If you\'ve left the mode as the default you\'ll receive a message explaining the mode does not exist. Feel free to change this to a mode that does exist.')
+        Add_Dir(name='EXAMPLE FOLDER', url='', mode='changeme', folder=True, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
+        Add_Dir(name='EXAMPLE ITEM', url='', mode='changeme', folder=False, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
+        Add_Dir(name='EXAMPLE BAD FUNCTION', url='', mode='bad_function', folder=False, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
+#-----------------------------
+@route(mode="bad_function")
+def Bad_Function():
+    if debug != 'true':
+        dialog.ok('SET DEBUG TO TRUE','Go into your add-on settings and set debug mode to True then run this again. If debug is set to true we have proper error reporting in place to help your add-on development.')
+        koding.Open_Settings(focus='1.1')
+    xbmc.log(this_should_error)
+#-----------------------------
+@route(mode='testing', args=["my_text","my_desc"])
+def Testing(my_text,my_desc):
+    dialog.ok('TEST','Here are the params we recieved in Testing() function:', 'my_text: [COLOR=dodgerblue]%s[/COLOR]' % my_text,'my_desc: [COLOR=dodgerblue]%s[/COLOR]'%my_desc)
+#-----------------------------
+@route(mode="video_examples")
+def Video_Examples():
+    """
+Below are some examples showing Add_Dir() with some artwork and infolabels sent through including trailer link for a movie
+You would obviously use some sort of automated loop to auto-generate this info for large lists but hopefully this example may help
+    """
+    Add_Dir(name='[COLOR=dodgerblue][TV][/COLOR] Fraggle Rock S03E21', url='episode_dialog', mode='scrape_sites', folder=False, content_type='Video',
+        icon='https://images-na.ssl-images-amazon.com/images/M/MV5BNzg0MzQwODY3N15BMl5BanBnXkFtZTgwMjA2OTEwMjE@._V1_SY1000_CR0,0,789,1000_AL_.jpg',
+        fanart='https://images-na.ssl-images-amazon.com/images/M/MV5BMjI0MjI4NTEwNV5BMl5BanBnXkFtZTgwMzA4NTQ2MjE@._V1_.jpg',
+        info_labels={"season":"03", "episode":"21", "genre":"Kids", "plot":"Get your cares away, worries for another day...", "mpaa":"U"})
+
+    Add_Dir(name='[COLOR=dodgerblue][MOVIE][/COLOR] Trainspotting', url='movie_dialog', mode='scrape_sites', folder=False, content_type='Video',
+        icon='https://images-na.ssl-images-amazon.com/images/M/MV5BMzA5Zjc3ZTMtMmU5YS00YTMwLWI4MWUtYTU0YTVmNjVmODZhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg',
+        fanart='https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNjE3NzU2Nl5BMl5BanBnXkFtZTcwMzI0OTAyNg@@._V1_.jpg',
+        info_labels={"originaltitle":"Trainspotting","genre":"crime,british", "plot":"Trainspotting is an awesome movie!", "mpaa":"18", "trailer":"plugin://plugin.video.youtube/play/?video_id=nBKWnAdmJJ8"})
+    dialog.ok('CLICK INFO','Try bringing up the info for these items, you should see our artwork and other metadata has been populated.')
+#-----------------------------
+@route(mode="music_examples")
+def Music_Examples():
+    """
+This is an example of adding a song, there's a good chance the scaper will find no results for this song,
+it's only here as an example to show how to set things like artwork.
+    """
+    Add_Dir(name='Sally Cinnamon - Stone Roses', url='song_dialog', mode='scrape_sites', folder=False,
+        icon='http://images.rapgenius.com/7929026cc89ab0c77669dee5cc323da9.530x528x1.jpg',
+        fanart='http://www.flickofthefinger.co.uk/wp-content/uploads/2016/03/the-stone-roses-1.jpg',
+        info_labels={"genre":"Rock,Inde,British", "artist":"Stone Roses", "title":"Sally Cinnamon"})
+#-----------------------------
+@route(mode="scrape_sites", args=["url"])
+def Scrape_Sites(list_type):
+    """
+This is a dummy function, you would add whatever code you require in here for grabbing the content.
+Please do not use this function for scraping copyright infringing content. If you need a site to test with
+archive.org has a good library of public domain music and video files.
+    """
+    content = ''
+    if list_type == 'movie_dialog':
+        dolog('Add your code to scrape for a movie')
+    elif list_type == 'episode_dialog':
+        dolog('Add your code to scrape for a tv show')
+    elif list_type == 'song_dialog':
+        dolog('Add your code to scrape for a song')
+
+# If the item returned is a dictionary that's great we know we have a list to work with
+    if koding.Data_Type(content) == 'dict':
+        xbmc.log(repr(content),2)
+        playback = koding.Play_Video(video=content["url"], showbusy=True)
+ 
+# It may be a plugin or direct url has been sent through, if so lets use the list_type variable
+    elif not list_type.endswith('_dialog'):
+        playback = koding.Play_Video(video=list_type, showbusy=True)
+
+# Nothing useful has been found, lets exit back to the list
+    else:
+        return
+
+# If the playback returned as True then it was successful but if it was False we know we need to try again for another source
+    if not playback:
+        if dialog.yesno('PLAYBACK FAILED','The video may have been removed, the web host may have altered their code or this video may not be available in your region. [COLOR=dodgerblue]Would you like to try another source?[/COLOR]'):
+            Scrape_Sites(list_type)
+
+#----------------------------------------------------------------
+
+"""
+    SECTION 6:
+    Essential if creating list items, this tells kodi we're done creating our list items.
+    The list will not populate without this. In the run command you need to set default to
+    whatever route you want to open into, in this example the 'main' route which opens the
+    Main_Menu() function up at the top.
+"""
+if __name__ == "__main__":
+    Run(default='main')
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))

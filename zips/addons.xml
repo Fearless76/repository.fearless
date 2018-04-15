@@ -16,6 +16,63 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.biz" version="1.1.34" name="[COLOR blue][B]Biz[/B][/COLOR]" provider-name="[COLOR blue][B]Biz[/B][/COLOR]">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.biz" />
+		<import addon="script.biz.artwork" version="1.0.0" />
+		<import addon="script.biz.metadata" version="1.0.0" />
+		<import addon="script.module.urlresolver" version="3.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Movies and TV Shows on [COLOR blue]Biz[/COLOR]</summary>
+		<description lang="en">Please remember that Biz is not an official part of the Kodi media player you are running, and therefore is not to be mentioned within official support channels of Kodi, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<platform>all</platform>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<assets>
+			<icon>icon.jpg</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.news12" version="1.0.3" name="News12" provider-name="Lunatixz">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.simplecache" version="1.0.0"/>
+        <import addon="script.module.feedparser" version="5.1.3"/>
+        <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Welcome to News 12!</summary>
+        <description lang="en_GB">News 12, a cable network exclusive to seven regions of the New York tri-state area. Please select an region to get the latest local news and information.</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+        <source>https://github.com/Lunatixz/Kodi_Addons/tree/master/plugin.video.news12</source>
+        <website>http://news12.com</website>
+        <forum>https://forum.kodi.tv/showthread.php?tid=319396</forum>
+        <news>v1.0.3[CR]- Leia Compatibility[CR]v1.0.2[CR]- Improved browsing speed.[CR]v.1.0.1[CR]- Fixed Video Quality Error</news>
+        <assets>
+            <icon>resources/images/icon.png</icon>
+            <fanart>resources/images/fanart.jpg</fanart>
+            <screenshot>resources/images/screenshot01.png</screenshot>
+            <screenshot>resources/images/screenshot02.png</screenshot>
+            <screenshot>resources/images/screenshot03.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.transporter" name="Transporter" version="2018.04.03" provider-name="Fearless">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
@@ -50,39 +107,32 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.tvplayer" name="Tv Player" version="0.3.2" provider-name="catchup4kodi">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
+<addon id="plugin.video.untouchables" version="2018.02.22" name="Untouchables" provider-name="Fearless">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+        <import addon="script.untouchables.artwork" version="2018.04.14"/>
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.metahandler" version="2.9.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.beautifulsoup" version="3.2.1"/>
+        <import addon="script.module.schism.common" version="2017.06.08"/>
+        <import addon="script.module.futures" version="2.2.0"/>
+        <import addon="script.module.universalscrapers" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="untouchables.py">
         <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Stream Most Uk Live tv</summary>
-    <description lang="en">Stream Most Uk Live tv</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.untouchables" name="Untouchables" version="0.0.1" provider-name="Fearless">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.python.koding.aio" version="0.0.1"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Untouchables</summary>
-		<description lang="en"></description>
-		<platform>all</platform>
-		<forum>http://www.noobsandnerds.com/support</forum>
-		<website>www.noobsandnerds.com</website>
-		<news></news>
-		<genre>kids,movies,music,tvshows,usa</genre>
-		<video_guide></video_guide>
-		<video_preview></video_preview>
-	</extension>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Untouchables movies and TV shows</summary>
+        <description lang="en">Watch movies and TV shows in high quality! Please note that this addon is not an official part of the Kodi media player and is therefore not to be mentioned within Kodi's official support channels. This addon has nothing to do with the media player itself, nor its intended use, it is simply a third party plugin which has been added to your system.</description>
+        <disclaimer lang="en">The author does not host any content, nor is he affiliated with any of the content providers.</disclaimer>
+        <platform>all</platform>
+        <news>Fork of Elysium credit to original Devs / Replaced more lists / Fixed channels / Added resolution to scraper dialog (thanks to Mr Blamo)</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="repository.fearless" name="Fearless" version="0.0.1" provider-name="Fearless">
@@ -91,11 +141,6 @@
 			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-		</dir>
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/biglad/CerebroTVRepo/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/biglad/CerebroTVRepo/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/biglad/CerebroTVRepo/master/zips/</datadir>
 		</dir>
 		<dir>
                 <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
@@ -142,6 +187,36 @@
             <platform>all</platform>
         </extension>
     </addon>
+
+<addon id="script.biz.artwork" version="1.0.1" name="Biz Artwork" provider-name="Biz">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Biz Addon</summary>
+		<description>Themes for Biz are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+        <assets>
+	      <icon>icon.jpg</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.biz.metadata" version="1.0.3" name="Biz Metadata" provider-name="Biz">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for Biz Addon</summary>
+		<description>Metadata for Biz are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+        <assets>
+	      <icon>icon.jpg</icon>
+		</assets>
+	</extension>
+</addon>
 
 <addon id="script.module.aragon" name="Aragon Live" version="1.1" provider-name="Gandelf/RACC">
   <requires>
@@ -192,6 +267,36 @@
   </extension>
 </addon>
 
+<addon id="script.module.biz" name="Biz Module" version="1.00.029" provider-name="Biz">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Biz</summary>
+        <assets>
+	      <icon>icon.jpg</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.module.schism.common" name="Elysium Common Libraries" version="2017.06.08" provider-name="Elysium">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.six" />
+		<import addon="script.module.metahandler" />
+		<import addon="script.module.beautifulsoup" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Collection of modules used by Elysium</summary>
+		<description lang="en">Collection of modules used by Elysium</description>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
 <addon id="script.module.universalscrapers" name="Universal Scrapers" version="1.0.5" provider-name="Team Universal">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -216,5 +321,20 @@
             <license>GPL v3</license>
             <source>https://</source>
         </extension>
+</addon>
+
+<addon id="script.untouchables.artwork" version="2018.04.14" name="Untouchables Artwork" provider-name="Fearless">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Untouchables Addon</summary>
+		<description></description>
+		<platform>all</platform>
+		<news>Added new artwork</news>
+	</extension>
 </addon>
 </addons>

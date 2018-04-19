@@ -1,0 +1,25 @@
+﻿<addon id="plugin.video.starplex" version="4.18.18" name="Starplex" provider-name="Fearless">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.starplex" />
+		<import addon="script.starplex.artwork" version="1.0.0" />
+		<import addon="script.starplex.metadata" version="1.0.0" />
+		<import addon="script.module.urlresolver" version="3.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="script.module.universalscrapers" version="1.0.0"/
+		<import addon="plugin.video.youtube"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Starplex Movies and TV Shows</summary>
+		<platform>all</platform>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<news>Fixed missing sources, updated scrapers!</news>
+	</extension>
+</addon>

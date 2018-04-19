@@ -113,6 +113,32 @@
     </extension>
 </addon>
 
+﻿<addon id="plugin.video.starplex" version="4.18.18" name="Starplex" provider-name="Fearless">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.starplex" />
+		<import addon="script.starplex.artwork" version="1.0.0" />
+		<import addon="script.starplex.metadata" version="1.0.0" />
+		<import addon="script.module.urlresolver" version="3.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="script.module.universalscrapers" version="1.0.0"/
+		<import addon="plugin.video.youtube"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Starplex Movies and TV Shows</summary>
+		<platform>all</platform>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<news>Fixed missing sources, updated scrapers!</news>
+	</extension>
+</addon>
+
 <addon id="plugin.video.transporter" name="Transporter" version="2018.04.03" provider-name="Fearless">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
@@ -337,6 +363,20 @@
 	</extension>
 </addon>
 
+<addon id="script.module.placenta" name="Placenta Module" version="1.2.9" provider-name="Team Afterbirth">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Placenta</summary>
+		<description>Covenant Fork from Echo/Colossus era with Team Afterbirth's updates and new code.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <license>Beerware rev. 42</license>
+	</extension>
+</addon>
+
 <addon id="script.module.universalscrapers" name="Universal Scrapers" version="1.0.5" provider-name="Team Universal">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -361,6 +401,38 @@
             <license>GPL v3</license>
             <source>https://</source>
         </extension>
+</addon>
+
+<addon id="script.starplex.artwork" version="1.0.7" name="Starplex Artwork" provider-name="Fearless">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Starplex Addon</summary>
+		<description>Artwork Module for Starplex Addon</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
+The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
+This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <license></license>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.starplex.metadata" version="1.0.1" name="Starplex Metadata" provider-name="Fearless">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Starplex Addon</summary>
+		<description></description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
+The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
+This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <license></license>
+		<platform>all</platform>
+	</extension>
 </addon>
 
 <addon id="script.untouchables.artwork" version="2018.04.14" name="Untouchables Artwork" provider-name="Fearless">

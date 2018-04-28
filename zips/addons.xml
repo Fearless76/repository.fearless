@@ -173,34 +173,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.untouchables" version="2018.02.22" name="Untouchables" provider-name="Fearless">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0"/>
-        <import addon="script.untouchables.artwork" version="2018.04.14"/>
-        <import addon="script.module.resolveurl" />
-        <import addon="script.module.metahandler" version="2.9.0"/>
-        <import addon="script.module.requests" version="2.12.4"/>
-        <import addon="script.module.beautifulsoup" version="3.2.1"/>
-        <import addon="script.module.schism.common" version="2017.06.08"/>
-        <import addon="script.module.futures" version="2.2.0"/>
-        <import addon="script.module.universalscrapers" version="1.0.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="untouchables.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Untouchables movies and TV shows</summary>
-        <description lang="en">Watch movies and TV shows in high quality! Please note that this addon is not an official part of the Kodi media player and is therefore not to be mentioned within Kodi's official support channels. This addon has nothing to do with the media player itself, nor its intended use, it is simply a third party plugin which has been added to your system.</description>
-        <disclaimer lang="en">The author does not host any content, nor is he affiliated with any of the content providers.</disclaimer>
-        <platform>all</platform>
-        <news>Fork of Elysium credit to original Devs / Replaced more lists / Fixed channels / Added resolution to scraper dialog (thanks to Mr Blamo)</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
 <addon id="repository.fearless" name="Fearless" version="0.0.1" provider-name="Fearless">
 	<extension point="xbmc.addon.repository" name="Fearless">
 		<dir>
@@ -432,21 +404,6 @@ The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
 This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
         <license></license>
 		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="script.untouchables.artwork" version="2018.04.14" name="Untouchables Artwork" provider-name="Fearless">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.script" library="default.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Themes for the Untouchables Addon</summary>
-		<description></description>
-		<platform>all</platform>
-		<news></news>
 	</extension>
 </addon>
 </addons>

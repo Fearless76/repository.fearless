@@ -56,34 +56,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.biz" version="1.1.34" name="[COLOR blue][B]Biz[/B][/COLOR]" provider-name="[COLOR blue][B]Biz[/B][/COLOR]">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.biz" />
-		<import addon="script.biz.artwork" version="1.0.0" />
-		<import addon="script.biz.metadata" version="1.0.0" />
-		<import addon="script.module.urlresolver" version="3.0.0" />
-		<import addon="script.module.requests" />
-		<import addon="script.module.metahandler" version="1.0.0" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Movies and TV Shows on [COLOR blue]Biz[/COLOR]</summary>
-		<description lang="en">Please remember that Biz is not an official part of the Kodi media player you are running, and therefore is not to be mentioned within official support channels of Kodi, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
-		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-		<platform>all</platform>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<assets>
-			<icon>icon.jpg</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
-</addon>
-
 <addon id="plugin.video.news12" version="1.0.3" name="News12" provider-name="Lunatixz">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
@@ -113,29 +85,60 @@
     </extension>
 </addon>
 
-﻿<addon id="plugin.video.starplex" version="4.18.18" name="Starplex" provider-name="Fearless">
+<addon id="plugin.video.raiden" version="1.1.34" name="[COLOR blue][B]Raiden[/B][/COLOR]" provider-name="[COLOR blue][B]Raiden[/B][/COLOR]">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.starplex" />
-		<import addon="script.starplex.artwork" version="1.0.0" />
-		<import addon="script.starplex.metadata" version="1.0.0" />
+		<import addon="script.module.raiden" />
+		<import addon="script.raiden.artwork" version="1.0.0" />
+		<import addon="script.raiden.metadata" version="1.0.0" />
 		<import addon="script.module.urlresolver" version="3.0.0" />
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" version="1.0.0" />
-		<import addon="script.module.universalscrapers" version="1.0.0"/
-		<import addon="plugin.video.youtube"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Starplex Movies and TV Shows</summary>
+		<summary lang="en">Movies and TV Shows on [COLOR blue]Raiden[/COLOR]</summary>
+		<description lang="en">Please remember that Raiden is not an official part of the Kodi media player you are running, and therefore is not to be mentioned within official support channels of Kodi, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
 		<platform>all</platform>
 		<forum></forum>
 		<website></website>
 		<source></source>
-		<news>Fixed missing sources, updated scrapers!</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.starplex" version="4.21.18" name="[COLOR gold][B]Starplex[/B][/COLOR]" provider-name="[COLOR gold][B]Starplex[/B][/COLOR]">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="repository.starplex" version="1.0.0" />
+		<import addon="script.module.starplex" />
+		<import addon="script.starplex.artwork" version="1.0.7" />
+		<import addon="script.starplex.metadata" version="1.0.0" />
+		<import addon="script.module.urlresolver" version="3.0.0" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="starplex.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Starplex</summary>
+		<description lang="en">Kindly note that Starplex is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>- Updated existing providers</news>
 	</extension>
 </addon>
 
@@ -150,8 +153,8 @@
     <import addon="script.module.xmltodict" version="0.9.0" />
     <!--<import addon="script.module.web-pdb" version="1.0"/>-->
         <import addon="script.module.resolveurl" />
-		<import addon="script.module.aragon" version="1.0" />
-        <import addon="script.module.aragon.net" version="1.0" />
+		<import addon="script.module.transporter" version="1.0" />
+        <import addon="script.module.transporter.net" version="1.0" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>audio video</provides>
@@ -226,37 +229,28 @@
         </extension>
     </addon>
 
-<addon id="script.biz.artwork" version="1.0.1" name="Biz Artwork" provider-name="Biz">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Themes for the Biz Addon</summary>
-		<description>Themes for Biz are maintained separately to make distribution of the the addon itself easier/faster.</description>
-		<platform>all</platform>
-        <assets>
-	      <icon>icon.jpg</icon>
-		</assets>
-	</extension>
+<addon id="script.ezmaintenanceplus" name="EZ Maintenance+" version="2018.04.14" provider-name="aenema">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests" version="1.0.0" />
+    <import addon="repository.aenemapy" version="1.0.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+     <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+	<summary>A Streamlined Utility Tool for Kodi</summary>
+	<description>No Bloatware, no Nonsense! Just Keep your Kodi sharp and clean with this utility tool... Now with a Custom Wizard.</description>
+    <language></language>
+    <platform>all</platform>
+    <license>The MIT License</license>
+    <forum>-</forum>
+    <source>https://github.com</source>
+  </extension>
 </addon>
 
-<addon id="script.biz.metadata" version="1.0.3" name="Biz Metadata" provider-name="Biz">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Metadata for Biz Addon</summary>
-		<description>Metadata for Biz are maintained separately to make distribution of the the addon itself easier/faster.</description>
-		<platform>all</platform>
-        <assets>
-	      <icon>icon.jpg</icon>
-		</assets>
-	</extension>
-</addon>
-
-<addon id="script.module.aragon" name="Aragon Live" version="1.1" provider-name="Gandelf/RACC">
+<addon id="script.module.fearlesstv" name="Fearless TV" version="1.0" provider-name="Fearless/RACC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.livestreamer" />
@@ -264,11 +258,11 @@
     <import addon="script.module.routing" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
+    <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">Aragon Live  Dependency</summary>
-    <description lang="en_gb">Aragon Live  Dependency</description>
+    <summary lang="en_gb">Fearless TV</summary>
+    <description lang="en_gb">Fearless TV</description>
     <disclaimer lang="en_gb"></disclaimer>
     <language></language>
     <platform>all</platform>
@@ -280,39 +274,14 @@
   </extension>
 </addon>
 
-<addon id="script.module.aragon.net" name="Aragon Live NetTV" version="1.0" provider-name="Gandelf/RACC">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.pyamf" />
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">Aragon Live NetTV Dependency</summary>
-    <description lang="en_gb">Aragon Live NetTV Dependency</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-  </extension>
-</addon>
-
-<addon id="script.module.biz" name="Biz Module" version="1.00.029" provider-name="Biz">
+<addon id="script.module.raiden" name="Raiden Module" version="1.00.029" provider-name="Fearless">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en">Biz</summary>
+		<summary lang="en">Raiden</summary>
         <assets>
 	      <icon>icon.jpg</icon>
 		</assets>
@@ -349,6 +318,55 @@
 	</extension>
 </addon>
 
+<addon id="script.module.transporter" name="Transporter Live" version="1.1" provider-name="Fearless">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_gb">Transporter Live  Dependency</summary>
+    <description lang="en_gb">Transporter Live  Dependency</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
+<addon id="script.module.transporter.net" name="Transporter Live NetTV" version="1.0" provider-name="Fearless">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.pyamf" />
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_gb">Transporter Live NetTV Dependency</summary>
+    <description lang="en_gb">Transporter Live NetTV Dependency</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
 <addon id="script.module.universalscrapers" name="Universal Scrapers" version="1.0.5" provider-name="Team Universal">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -373,6 +391,36 @@
             <license>GPL v3</license>
             <source>https://</source>
         </extension>
+</addon>
+
+<addon id="script.raiden.artwork" version="1.0.1" name="Raiden Artwork" provider-name="Fearless">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Raiden Addon</summary>
+		<description>Themes for Raiden are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+        <assets>
+	      <icon>icon.jpg</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.raiden.metadata" version="1.0.3" name="Raiden Metadata" provider-name="Raiden">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for Raiden Addon</summary>
+		<description>Metadata for Raiden are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+        <assets>
+	      <icon>icon.jpg</icon>
+		</assets>
+	</extension>
 </addon>
 
 <addon id="script.starplex.artwork" version="1.0.7" name="Starplex Artwork" provider-name="Fearless">

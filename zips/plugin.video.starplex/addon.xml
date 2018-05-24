@@ -1,25 +1,29 @@
-﻿<addon id="plugin.video.starplex" version="4.18.18" name="Starplex" provider-name="Fearless">
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.starplex" version="4.21.18" name="[COLOR gold][B]Starplex[/B][/COLOR]" provider-name="[COLOR gold][B]Starplex[/B][/COLOR]"> 
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="repository.starplex" version="1.0.0" />
 		<import addon="script.module.starplex" />
-		<import addon="script.starplex.artwork" version="1.0.0" />
+		<import addon="script.starplex.artwork" version="1.0.7" />
 		<import addon="script.starplex.metadata" version="1.0.0" />
 		<import addon="script.module.urlresolver" version="3.0.0" />
-		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" version="1.0.0" />
-		<import addon="script.module.universalscrapers" version="1.0.0"/
-		<import addon="plugin.video.youtube"/>
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
+	<extension point="xbmc.python.pluginsource" library="starplex.py">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Starplex Movies and TV Shows</summary>
+		<summary lang="en">Starplex</summary>
+		<description lang="en">Kindly note that Starplex is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
 		<platform>all</platform>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<news>Fixed missing sources, updated scrapers!</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>- Updated existing providers</news>
 	</extension>
 </addon>

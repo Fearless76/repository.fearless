@@ -1,40 +1,8 @@
 # Addon Name: Exodus
 # Addon id: plugin.video.exodus
 # Addon Provider: Exodus
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Viper2k4, 2017
-# lambda81, 2016
-# lambda81, 2016
-# plasticfighter, 2016
-# plasticfighter, 2016-2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Exodus\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-30 12:02+0000\n"
-"Last-Translator: plasticfighter\n"
-"Language-Team: Hungarian (http://www.transifex.com/tv-addons/exodus/language/hu/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#32001"
 msgid "Movies"
@@ -102,7 +70,7 @@ msgstr "Televíziótársaságok"
 
 msgctxt "#32017"
 msgid "People Watching"
-msgstr "Népszerű"
+msgstr "Sokan nézik"
 
 msgctxt "#32018"
 msgid "Most Popular"
@@ -174,7 +142,7 @@ msgstr "IMDb"
 
 msgctxt "#32035"
 msgid "Featured"
-msgstr "Kiemelt"
+msgstr "Ajánlott"
 
 msgctxt "#32036"
 msgid "History"
@@ -266,15 +234,14 @@ msgstr "Folyamat befejeződött"
 
 msgctxt "#32058"
 msgid "This will slow down things until they are re-cached!"
-msgstr "Ez lelassítja a működést, amíg a tartalmak újra bekerülnek a gyorsítótárba!"
+msgstr "Ez lassítja a működést ideiglenesen, amíg újból be kerülnek a dolgok a gyorsítótárba!"
 
 msgctxt "#32059"
 msgid "CLICK HERE TO SAVE VIEW"
-msgstr "A NÉZET MENTÉSÉHEZ KATTINTSON IDE"
+msgstr "A BEÁLLÍTÁS MENTÉSÉHEZ KATTINTSON IDE"
 
 msgctxt "#32060"
-msgid ""
-"January|February|March|April|May|June|July|August|September|October|November|December"
+msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr "Január|Február|Március|Április|Május|Június|Július|Augusztus|Szeptember|Október|November|December"
 
 msgctxt "#32061"
@@ -319,7 +286,7 @@ msgstr "Trakt Kezelő"
 
 msgctxt "#32071"
 msgid "Browse Series"
-msgstr "Évadok megtekintése"
+msgstr "Sorozatok megtekintése"
 
 msgctxt "#32072"
 msgid "Refresh"
@@ -327,11 +294,11 @@ msgstr "Frissítés"
 
 msgctxt "#32073"
 msgid "[B]HELP[/B] : www.tvaddons.ag"
-msgstr "[B]SEGÍTSÉG[/B] : www.tvaddons.ag"
+msgstr "[B]SÚGÓ[/B] : www.tvaddons.ag"
 
 msgctxt "#32074"
 msgid "[B]HELP[/B]"
-msgstr "[B]SEGÍTSÉG[/B]"
+msgstr "[B]SÚGÓ[/B]"
 
 msgctxt "#32301"
 msgid "Enabled"
@@ -415,7 +382,7 @@ msgstr "Legújabb filmek"
 
 msgctxt "#32321"
 msgid "Featured"
-msgstr "Kiemelt"
+msgstr "Ajánlott"
 
 msgctxt "#32322"
 msgid "People Watching"
@@ -431,7 +398,7 @@ msgstr "Jelenleg a mozikban"
 
 msgctxt "#32325"
 msgid "New Episodes"
-msgstr "Legújabb epizódok"
+msgstr "Legújabb sorozatok"
 
 msgctxt "#32326"
 msgid "Episodes"
@@ -475,11 +442,11 @@ msgstr "Folyamat párbeszédablak"
 
 msgctxt "#32336"
 msgid "Foreground"
-msgstr "Előtérben"
+msgstr "Normál"
 
 msgctxt "#32337"
 msgid "Background"
-msgstr "Háttérben"
+msgstr "Minimalizál"
 
 msgctxt "#32338"
 msgid "File Hosting Filters"
@@ -619,7 +586,7 @@ msgstr "Folytatás"
 
 msgctxt "#32511"
 msgid "An account already exists."
-msgstr "Egy fiók már meg van adva."
+msgstr "Egy fiók már létezik"
 
 msgctxt "#32512"
 msgid "Do you want to reset?"
@@ -639,23 +606,23 @@ msgstr "Trakt Kezelő"
 
 msgctxt "#32516"
 msgid "Add to [B]Collection[/B]"
-msgstr "Hozzáadás a [B]Gyűjteményhez[/B]"
+msgstr "Hozzáadás gyűjteményhez"
 
 msgctxt "#32517"
 msgid "Remove from [B]Collection[/B]"
-msgstr "Eltávolítás a [B]Gyűjteményből[/B]"
+msgstr "Eltávolítás gyűjteményből"
 
 msgctxt "#32518"
 msgid "Add to [B]Watchlist[/B]"
-msgstr "Hozzáadás a [B]Figyelőlistához[/B]"
+msgstr "Hozzáadás figyelőlistához"
 
 msgctxt "#32519"
 msgid "Remove from [B]Watchlist[/B]"
-msgstr "Eltávolítás a [B]Figyelőlistából[/B]"
+msgstr "Eltávolítás figyelőlistából"
 
 msgctxt "#32520"
 msgid "Add to [B]new List[/B]"
-msgstr "Hozzáadás [B]új Listához[/B]"
+msgstr "Hozzáadás új listához"
 
 msgctxt "#32521"
 msgid "Add to [B]%s[/B]"
@@ -663,11 +630,11 @@ msgstr "Hozzáadás ehhez [B]%s[/B]"
 
 msgctxt "#32522"
 msgid "Remove from [B]%s[/B]"
-msgstr "Eltávolítás innen [B]%s[/B]"
+msgstr "Remove from [B]%s[/B]"
 
 msgctxt "#32531"
 msgid "An account already exists."
-msgstr "Egy fiók már meg van adva."
+msgstr "Egy fiók már létezik"
 
 msgctxt "#32532"
 msgid "Do you want to reset?"
@@ -680,130 +647,3 @@ msgstr "1) Látogassa meg : [COLOR skyblue]%s[/COLOR]"
 msgctxt "#32534"
 msgid "2) When prompted enter : [COLOR skyblue]%s[/COLOR]"
 msgstr "2) Amikor kéri írja be ezt : [COLOR skyblue]%s[/COLOR]"
-
-msgctxt "#32535"
-msgid "Play Random"
-msgstr "Véletlenszerű lejátszás"
-
-msgctxt "#32536"
-msgid "Playing"
-msgstr "Lejátszás"
-
-msgctxt "#32537"
-msgid "Nothing found to play"
-msgstr "Nem található lejátszható elem"
-
-msgctxt "#32538"
-msgid "DEBRID-SERVICE"
-msgstr "DEBRID SZOLGÁLTATÁS"
-
-msgctxt "#32539"
-msgid "Configure Debrid Services in URLResolver Settings."
-msgstr "Debrid szolgáltatások konfigurálása az URLResolver beállíásokban"
-
-msgctxt "#32540"
-msgid "URLResolver Settings"
-msgstr "URLResolver beállítások"
-
-msgctxt "#32541"
-msgid "Library"
-msgstr "Médiatár"
-
-msgctxt "#32542"
-msgid ""
-"Exodus folders will be imported to library if they are added to media "
-"sources."
-msgstr "Az Exodus mappák bekerülnek a médiatárba, ha hozzá vannak adva a forrásokhoz."
-
-msgctxt "#32543"
-msgid "Movies"
-msgstr "Filmek"
-
-msgctxt "#32544"
-msgid "TV"
-msgstr "Sorozatok"
-
-msgctxt "#32545"
-msgid "Auto update TV Shows"
-msgstr "Sorozatok automatikus frissítése"
-
-msgctxt "#32546"
-msgid "Show notifications during update"
-msgstr "Értesítések megjelenítése frissítés közben"
-
-msgctxt "#32547"
-msgid "Update library after adding content"
-msgstr "Médiatár frissítése tartalom hozzáadása után"
-
-msgctxt "#32548"
-msgid "Avoid creating duplicate content"
-msgstr "Duplikált tartalom létrehozásának elkerülése"
-
-msgctxt "#32549"
-msgid "Check movie before adding it"
-msgstr "Film leellenőrzése hozzáadás előtt"
-
-msgctxt "#32550"
-msgid "Check first episode of season before adding it"
-msgstr "Sorozat első epizódjának leellenőrzése hozzáadás előtt"
-
-msgctxt "#32551"
-msgid "Add to Library"
-msgstr "Hozzáadás a Médiatárhoz"
-
-msgctxt "#32552"
-msgid "Adding to library..."
-msgstr "Médiatárhoz adás..."
-
-msgctxt "#32553"
-msgid "Updating TV shows..."
-msgstr "Sorozatok frissítése..."
-
-msgctxt "#32554"
-msgid "Process Complete"
-msgstr "A folyamat befejeződött"
-
-msgctxt "#32555"
-msgid "Are you sure?"
-msgstr "Biztos benne?"
-
-msgctxt "#32556"
-msgid "[B]EXODUS[/B] : Library"
-msgstr "[B]EXODUS[/B] : Médiatár"
-
-msgctxt "#32557"
-msgid "[B]LIBRARY[/B] : Settings"
-msgstr "[B]MÉDIATÁR[/B] : Beállítások"
-
-msgctxt "#32558"
-msgid "[B]EXODUS[/B] : Update library..."
-msgstr "[B]EXODUS[/B] : Médiatár frissítése..."
-
-msgctxt "#32559"
-msgid "[B]EXODUS[/B] : Movie folder..."
-msgstr "[B]EXODUS[/B] : Filmek mappa..."
-
-msgctxt "#32560"
-msgid "[B]EXODUS[/B] : TV folder..."
-msgstr "[B]EXODUS[/B] : Sorozatok mappa..."
-
-msgctxt "#32561"
-msgid "[B]TRAKT[/B] : Import Collection..."
-msgstr "[B]TRAKT[/B] : Gyűjtemény importálása..."
-
-msgctxt "#32562"
-msgid "[B]TRAKT[/B] : Import Watchlist..."
-msgstr "[B]TRAKT[/B] : Figyelőlista importálása..."
-
-msgctxt "#32563"
-msgid "[B]TRAKT[/B] : Import TV Collection..."
-msgstr "[B]TRAKT[/B] : TV Gyűjtemény importálása..."
-
-msgctxt "#32564"
-msgid "[B]TRAKT[/B] : Import TV Watchlist..."
-msgstr "[B]TRAKT[/B] : TV figyelőlista importálása..."
-
-msgctxt "#32565"
-msgid "Include episodes with unknown air dates"
-msgstr "Megjelenési időpont nélküli epizódok importálása"
-

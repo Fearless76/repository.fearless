@@ -1,0 +1,23 @@
+<dir>
+    <name>[COLORlightblue][B]Sentinel TV[/COLOR][/B]</name>
+    <link>plugin://script.module.sentinel</link>
+    <thumbnail></thumbnail>
+	<fanart></fanart>
+</dir>
+
+<dir>
+    <name>[COLORlightblue][B]Sentinel TV I[/COLOR][/B]</name>
+    <link>plugin://script.module.Atriox</link>
+    <thumbnail></thumbnail>
+	<fanart></fanart>
+</dir>
+
+<dir>
+    <name>[COLORlightblue][B]Sentinel TV II[/COLOR][/B]</name>
+	<link>plugin://script.module.sentinel.net</link>
+    <thumbnail></thumbnail>
+	<fanart></fanart>
+</dir>
+
+
+

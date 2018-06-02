@@ -56,6 +56,42 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.fearless" name="Fearless" version="06.02.2018" provider-name="Fearless">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.universalscrapers" version="1.0.2"/>
+    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="script.module.xmltodict" version="0.9.0" />
+    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+		<import addon="script.module.sharetv" version="" />
+		<import addon="script.module.Sports" />
+		<import addon="repository.fearless" version="" />
+		<import addon="script.module.streamhublive"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Fearless addon</summary>
+    <description lang="en"></description>
+    <disclaimer lang="en">The authors of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk! Based off the Jen Template.</disclaimer>
+    <platform>all</platform>
+    <news></news>
+    <website></website>
+    <video_guide></video_guide>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot></screenshot>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="plugin.video.news12" version="1.0.3" name="News12" provider-name="Lunatixz">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
@@ -113,6 +149,40 @@
 	</extension>
 </addon>
 
+<addon id="plugin.video.sentineltv" name="Sentinel TV" version="2018.04.03" provider-name="Fearless">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.universalscrapers" version="1.0.2"/>
+    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="script.module.xmltodict" version="0.9.0" />
+    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+		<import addon="script.module.sentinel" version="1.0" />
+        <import addon="script.module.sentinel.net" version="1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Sentinel TV addon</summary>
+    <description lang="en"></description>
+    <disclaimer lang="en">The authors of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk! Based off the Jen Template.</disclaimer>
+    <platform>all</platform>
+    <news></news>
+    <website></website>
+    <video_guide></video_guide>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot></screenshot>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="plugin.video.starplex" version="4.21.18" name="[COLOR gold][B]Starplex[/B][/COLOR]" provider-name="[COLOR gold][B]Starplex[/B][/COLOR]">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
@@ -142,41 +212,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.transporter" name="Transporter" version="2018.04.03" provider-name="Fearless">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
-    <import addon="script.module.universalscrapers" version="1.0.2"/>
-    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.requests" version="2.9.1"/>
-    <import addon="script.module.addon.common" version="2.0.0"/>
-    <import addon="script.module.xmltodict" version="0.9.0" />
-    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.resolveurl" />
-		<import addon="script.module.transporter" version="1.0" />
-        <import addon="script.module.transporter.net" version="1.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Transporter addon</summary>
-    <description lang="en"></description>
-    <disclaimer lang="en">The authors of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk! Based off the Jen Template.</disclaimer>
-    <platform>all</platform>
-    <news></news>
-    <website></website>
-    <video_guide></video_guide>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-      <screenshot></screenshot>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="repository.fearless" name="Fearless" version="0.0.1" provider-name="Fearless">
+<addon id="repository.fearless" name="Fearless" version="0.0.2" provider-name="Fearless">
 	<extension point="xbmc.addon.repository" name="Fearless">
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
@@ -250,6 +286,54 @@
   </extension>
 </addon>
 
+<addon id="script.module.Atriox" name="Atriox" version="1.0" provider-name="RACC">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_gb">Atriox APK</summary>
+    <description lang="en_gb">Atriox APK</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
+<addon id="script.module.Atrioxtv" name="Atriox TV" version="1.0" provider-name="Atriox">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_gb">Atriox Dependency NowTv</summary>
+    <description lang="en_gb">Atriox Live Dependency AtrioxTv</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
 <addon id="script.module.fearlesstv" name="Fearless TV" version="1.0" provider-name="Fearless/RACC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -304,6 +388,55 @@
 	</extension>
 </addon>
 
+<addon id="script.module.sentinel" name="Sentinel Live" version="1.1" provider-name="Fearless">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_gb">Sentinel Live  Dependency</summary>
+    <description lang="en_gb">Sentinel Live  Dependency</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
+<addon id="script.module.sentinel.net" name="Sentinel Live NetTV" version="1.0" provider-name="Fearless">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.pyamf" />
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_gb">Sentinel Live NetTV Dependency</summary>
+    <description lang="en_gb">Sentinel Live NetTV Dependency</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
 <addon id="script.module.placenta" name="Placenta Module" version="1.2.9" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
@@ -316,55 +449,6 @@
         <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
         <license>Beerware rev. 42</license>
 	</extension>
-</addon>
-
-<addon id="script.module.transporter" name="Transporter Live" version="1.1" provider-name="Fearless">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">Transporter Live  Dependency</summary>
-    <description lang="en_gb">Transporter Live  Dependency</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-  </extension>
-</addon>
-
-<addon id="script.module.transporter.net" name="Transporter Live NetTV" version="1.0" provider-name="Fearless">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.pyamf" />
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">Transporter Live NetTV Dependency</summary>
-    <description lang="en_gb">Transporter Live NetTV Dependency</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-  </extension>
 </addon>
 
 <addon id="script.module.universalscrapers" name="Universal Scrapers" version="1.0.5" provider-name="Team Universal">
